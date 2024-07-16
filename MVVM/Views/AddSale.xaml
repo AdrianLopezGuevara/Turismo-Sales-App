@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Turismo.MVVM.Views.AddSale"
+             Title="AddSale"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:Turismo.MVVM.ViewModels"
+             xmlns:converters="clr-namespace:Turismo.Converters">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FloatToStringConverter x:Key="FloatToStringConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <local:AddSaleViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20" VerticalOptions="Center">
+
+        <Label Text="Agregar venta"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,0,0,25" />
+
+        <Label Text="Seleccione un artesano" />
+        <Picker ItemsSource="{Binding Artisans}"
+                SelectedItem="{Binding CurrentSale.Artisan}" />
+
+        <Label Text="Seleccione una fecha" />
+        <DatePicker Date="{Binding CurrentSale.DateTime, Mode=TwoWay}" />
+
+        <Label Text="Introduzca el precio" />
+        <Entry Text="{Binding CurrentSale.Price, Converter={StaticResource FloatToStringConverter}, Mode=TwoWay}" 
+               Keyboard="Numeric" Placeholder="0.00" />
+
+        <Button Text="Guardar Venta"
+                Margin="0,25,0,0" 
+                Command="{Binding SaveSaleCommand}" />
+
+    </StackLayout>
+
+</ContentPage>
