@@ -1,0 +1,55 @@
+# .NET MAUI
+bin/
+obj/
+.Android/bin/
+.Android/obj/
+.iOS/bin/
+.iOS/obj/
+.MacOS/bin/
+.MacOS/obj/
+
+# Visual Studio
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Mac
+.DS_Store
+
+# User-specific files
+*.userprefs
+*.suo
+*.user
+*.sln.docstates
+
+# Packages
+packages/
+*.nupkg
+*.paket.restore.log
+
+# NuGet
+*.nuget.props
+*.nuget.targets
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET MAUI specific
+**/bin/
+**/obj/
