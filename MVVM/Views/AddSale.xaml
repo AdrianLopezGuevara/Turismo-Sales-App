@@ -12,33 +12,42 @@
             <converters:FloatToStringConverter x:Key="FloatToStringConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.BindingContext>
         <local:AddSaleViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="20" VerticalOptions="Center">
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand" Spacing="15">
 
         <Label Text="Agregar venta"
-               FontSize="24"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               Margin="0,0,0,25" />
+           FontSize="24"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           Margin="0,0,0,25" />
 
-        <Label Text="Seleccione un artesano" />
+        <Label Text="Seleccione un artesano"
+           FontSize="Medium"/>
         <Picker ItemsSource="{Binding Artisans}"
-                SelectedItem="{Binding CurrentSale.Artisan}" />
+            SelectedItem="{Binding CurrentSale.Artisan}"
+            Title="Seleccionar"
+            HorizontalOptions="FillAndExpand" />
 
-        <Label Text="Seleccione una fecha" />
-        <DatePicker Date="{Binding CurrentSale.DateTime, Mode=TwoWay}" />
+        <Label Text="Seleccione una fecha"
+           FontSize="Medium"/>
+        <DatePicker Date="{Binding CurrentSale.DateTime, Mode=TwoWay}"
+                HorizontalOptions="FillAndExpand" />
 
-        <Label Text="Introduzca el precio" />
-        <Entry Text="{Binding CurrentSale.Price, Converter={StaticResource FloatToStringConverter}, Mode=TwoWay}" 
-               Keyboard="Numeric" Placeholder="0.00" />
+        <Label Text="Introduzca el precio"
+           FontSize="Medium"/>
+        <Entry Text="{Binding CurrentSale.Price, Converter={StaticResource FloatToStringConverter}, Mode=TwoWay}"
+           Keyboard="Numeric"
+           Placeholder="0.00"
+           HorizontalOptions="FillAndExpand" />
 
         <Button Text="Guardar Venta"
-                Margin="0,25,0,0" 
-                Command="{Binding SaveSaleCommand}" />
+            Margin="0,25,0,0"
+            Command="{Binding SaveSaleCommand}"
+            HorizontalOptions="FillAndExpand" />
 
     </StackLayout>
 
