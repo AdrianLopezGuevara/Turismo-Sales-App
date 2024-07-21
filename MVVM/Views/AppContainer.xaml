@@ -11,4 +11,5 @@
     </NavigationPage>
 
     <views:SalesList Title="Ventas"/>
+    <views:ExportSales Title="Exportar Ventas"/>
 </TabbedPage>
