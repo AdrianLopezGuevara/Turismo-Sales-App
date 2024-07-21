@@ -44,6 +44,10 @@ namespace Turismo.MVVM.ViewModels
 
         private void ClearFields()
         {
+            CurrentSale = new Sale
+            {
+                DateTime = DateTime.Today
+            };
             OnPropertyChanged(nameof(CurrentSale));
         }
 
