@@ -13,59 +13,6 @@ namespace Turismo.MVVM.ViewModels
 {
     public class SalesListViewModel : INotifyPropertyChanged
     {
-        //public ObservableCollection<Sale> Sales { get; }
-        //public ObservableCollection<Sale> FilteredSales { get; }
-        //public ICommand LoadSalesCommand { get; }
-        //public ICommand FilterSalesCommand { get; }
-
-        //private DateTime _filterDate;
-        //public DateTime FilterDate
-        //{
-        //    get => _filterDate;
-        //    set
-        //    {
-        //        _filterDate = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
-        //public SalesListViewModel()
-        //{
-        //    Sales = new ObservableCollection<Sale>();
-        //    FilteredSales = new ObservableCollection<Sale>();
-        //    LoadSalesCommand = new Command(async () => await LoadSalesAsync());
-        //    FilterSalesCommand = new Command(FilterSales);
-        //    FilterDate = DateTime.Today;
-        //}
-
-        //private async Task LoadSalesAsync()
-        //{
-        //    Sales.Clear();
-        //    var sales = await App.Database.GetSalesAsync();
-        //    foreach (var sale in sales)
-        //    {
-        //        Sales.Add(sale);
-        //    }
-
-        //    FilterSales();
-        //}
-
-        //private void FilterSales()
-        //{
-        //    FilteredSales.Clear();
-        //    var filteredSales = Sales.Where(s => s.DateTime.Date == FilterDate.Date).ToList();
-        //    foreach (var sale in filteredSales)
-        //    {
-        //        FilteredSales.Add(sale);
-        //    }
-        //}
-
-        //public event PropertyChangedEventHandler? PropertyChanged;
-
-        //protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
         public ObservableCollection<Sale> Sales { get; }
         public ObservableCollection<Sale> FilteredSales { get; }
         public ICommand LoadSalesCommand { get; }
